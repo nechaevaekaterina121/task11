@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulary Worksheet: Peer Pressure & Behavior</title>
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=HZHRe-6lRNlTk_dsA9MXzUCEtb3zF3k3CkdSYTauymewXxQrEA0zG7wV_uMr4d4VpWw_TJwJjv2VFuHr-zZ-Ed3Cx02HAyQw5P6PskHbtiNCZl7oi4sr-Z3SaDbx1x_ikizRjrP_rG_A5rH6940Uzy48SYu2XF0y_tTRusVMHAkQsQFCt0oYywK_i3OBIQD2TwNihwD9HIYicFzzgAuElTxQ-FHwUkVFV-15fikNZ2pGUfUnlimqqiTQQYpbmrNSF9R4A_cpUMeDgRYUBrEzqswVK8opuvvIjEjUcMX06hP4WV3ciJj1r_ZH_XL4nWNQSoaS3k06BL64wrrwpK386w" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jb250cmlidXRpb24udXNlcmNvbnRlbnQuZ29vZ2xlLmNvbS9kb3dubG9hZD9jPUNneGlZWEprWDNOMGIzSmhaMlVTVUJJTmNtVnpjRzl1YzJWZlpHRjBZUm9fQ2pBME1tUTFPVFl3TXpkbU1URmtZbUZtTURBd05qVm1ObVZrWm1VME1qZzVNekF4TnpVek9UWmtOek13T0dGa1ltWVNDeElIRUlUbnQ1YktHUmdCJmZpbGVuYW1lPWludGVyYWN0aXZlX3dvcmtzaGVldF92My5odG1sJm9waT0xMDMxMzUwNTA"/><style>
+    :root {
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --success: #16a34a;
+      --success-bg: #dcfce7;
+      --error: #dc2626;
+      --error-bg: #fee2e2;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 16px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    header {
+      text-align: center;
+      padding: 24px 16px;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--border);
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .task-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* Task 1 & Task 4 Dropdowns */
+    .match-item, .sentence-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .match-item:last-child, .sentence-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .phrase-label, .sentence-text {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #0f172a;
+    }
+
+    .sentence-text {
+      font-weight: 500;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1.5px solid var(--border);
+      background-color: #fff;
+      font-size: 0.9rem;
+      color: var(--text);
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    }
+
+    select.correct {
+      border-color: var(--success);
+      background-color: var(--success-bg);
+      color: #14532d;
+    }
+
+    select.incorrect {
+      border-color: var(--error);
+      background-color: var(--error-bg);
+      color: #7f1d1d;
+    }
+
+    /* Task 2: Unscramble */
+    .unscramble-block {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .unscramble-block:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .chips-pool, .drop-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-height: 48px;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    .drop-area {
+      background-color: #f1f5f9;
+      border: 2px dashed #cbd5e1;
+      align-items: center;
+      transition: all 0.2s;
+    }
+
+    .drop-area.correct {
+      background-color: var(--success-bg);
+      border-color: var(--success);
+      border-style: solid;
+    }
+
+    .drop-area.incorrect {
+      background-color: var(--error-bg);
+      border-color: var(--error);
+      border-style: solid;
+    }
+
+    .chip {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      touch-action: manipulation;
+    }
+
+    .chip:active {
+      transform: scale(0.96);
+    }
+
+    .btn-reset-chips {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 0.8rem;
+      cursor: pointer;
+      font-weight: 600;
+      padding: 4px 0;
+      text-decoration: underline;
+    }
+
+    /* Task 3: Inputs */
+    .input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .styled-input {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1.5px solid var(--border);
+      font-size: 0.92rem;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .styled-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    }
+
+    .styled-input.correct {
+      border-color: var(--success);
+      background-color: var(--success-bg);
+      color: #14532d;
+    }
+
+    .styled-input.incorrect {
+      border-color: var(--error);
+      background-color: var(--error-bg);
+      color: #7f1d1d;
+    }
+
+    .feedback-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .select-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Score Bar */
+    .score-card {
+      position: sticky;
+      bottom: 12px;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      padding: 14px 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      border: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .score-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .score-val {
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    .btn-reset-all {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-reset-all:hover {
+      background: #e2e8f0;
+    }
+
+    @media (min-width: 640px) {
+      .match-item {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .phrase-label {
+        width: 42%;
+      }
+      .match-item select {
+        width: 55%;
+      }
+      .select-wrap {
+        width: 65%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Interactive Vocabulary Practice</h1>
+      <p>Topic: Peer Pressure & Social Behavior</p>
+    </header>
+
+    <!-- Task 1 -->
+    <section class="card">
+      <h2>1. Match the English phrases with translations</h2>
+      <p class="task-desc">Выберите правильный русский эквивалент из списка (варианты перемешаны). Проверка происходит сразу.</p>
+      
+      <div id="task1-list">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- Task 2 -->
+    <section class="card">
+      <h2>2. Put the words in order</h2>
+      <p class="task-desc">Нажимайте на слова, чтобы собрать предложение. Порядок проверяется автоматически.</p>
+      
+      <div id="task2-list">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- Task 3 -->
+    <section class="card">
+      <h2>3. Find and correct the spelling mistake</h2>
+      <p class="task-desc">В каждом предложении ровно одно слово написано с ошибкой. Найдите его и введите правильный вариант написания.</p>
+      
+      <div class="sentence-item">
+        <p class="sentence-text">1. He tried to perswaid his friend not to do anything reckless.</p>
+        <div class="input-wrap">
+          <input type="text" class="styled-input" placeholder="Введите исправленное слово..." data-target="persuade" oninput="checkSpelling(this)">
+          <span class="feedback-icon"></span>
+        </div>
+      </div>
+
+      <div class="sentence-item">
+        <p class="sentence-text">2. You should never tel a lie to people who trust you.</p>
+        <div class="input-wrap">
+          <input type="text" class="styled-input" placeholder="Введите исправленное слово..." data-target="tell" oninput="checkSpelling(this)">
+          <span class="feedback-icon"></span>
+        </div>
+      </div>
+
+      <div class="sentence-item">
+        <p class="sentence-text">3. If you lie to your parents, you will definitely regrett it later.</p>
+        <div class="input-wrap">
+          <input type="text" class="styled-input" placeholder="Введите исправленное слово..." data-target="regret" oninput="checkSpelling(this)">
+          <span class="feedback-icon"></span>
+        </div>
+      </div>
+
+      <div class="sentence-item">
+        <p class="sentence-text">4. The teacher tried to discurage students from cheating.</p>
+        <div class="input-wrap">
+          <input type="text" class="styled-input" placeholder="Введите исправленное слово..." data-target="discourage" oninput="checkSpelling(this)">
+          <span class="feedback-icon"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task 4 -->
+    <section class="card">
+      <h2>4. Choose the correct phrase to fill in the blank</h2>
+      <p class="task-desc">Выберите подходящее по смыслу выражение из выпадающего списка. Результат отображается мгновенно.</p>
+      
+      <div id="task4-list">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- Floating Score Card -->
+    <div class="score-card">
+      <div>
+        <div class="score-title">Ваш результат: <span class="score-val" id="total-score">0 / 22</span></div>
+      </div>
+      <button class="btn-reset-all" onclick="resetWorksheet()">Сбросить всё</button>
+    </div>
+  </div>
+
+  <script>
+    // TASK 1 DATA
+    const matchData = [
+      { en: "rough / tough crowd", ru: "Дурная / опасная компания" },
+      { en: "give in", ru: "Уступать / сдаваться под давлением" },
+      { en: "pick on", ru: "Придираться / задирать кого-то" },
+      { en: "make someone feel guilty", ru: "Заставить кого-то чувствовать вину" },
+      { en: "dissuade", ru: "Разубедить / отговорить" },
+      { en: "commit a crime", ru: "Совершить преступление" },
+      { en: "miss lessons", ru: "Пропускать уроки / прогуливать" },
+      { en: "fit in", ru: "Вписаться / быть принятым в компанию" }
+    ];
+
+    // Shuffled translations (разбросаны в случайном фиксированном порядке)
+    const shuffledTranslations = [
+      "Разубедить / отговорить",
+      "Придираться / задирать кого-то",
+      "Пропускать уроки / прогуливать",
+      "Дурная / опасная компания",
+      "Вписаться / быть принятым в компанию",
+      "Заставить кого-то чувствовать вину",
+      "Совершить преступление",
+      "Уступать / сдаваться под давлением"
+    ];
+
+    // TASK 2 DATA (Заменили come over на предложение со словом regret)
+    const unscrambleData = [
+      { correct: "It was difficult to resist peer pressure .", words: ["peer", "difficult", "It", "resist", "pressure", "was", "to", "."] },
+      { correct: "They decided to hang out at Alex's house .", words: ["out", "house", "decided", "They", "at", "hang", "to", "Alex's", "."] },
+      { correct: "You will regret your bad decision later .", words: ["later", "regret", "decision", "bad", "will", "You", "your", "."] },
+      { correct: "He decided to deny lying .", words: ["lying", "deny", "He", "to", "decided", "."] },
+      { correct: "That group had a bad influence on him .", words: ["a", "on", "group", "had", "influence", "That", "bad", "him", "."] }
+    ];
+
+    // TASK 4 DATA (Выпадающий список)
+    const task4Data = [
+      {
+        sentence: "1. Stealing is illegal, and anyone who [ ... ] must face the consequences.",
+        correct: "commits a crime",
+        options: ["commits a crime", "picks on", "resists", "makes someone feel guilty", "has a bad influence"]
+      },
+      {
+        sentence: "2. Older kids shouldn't [ ... ] younger students in the hallway.",
+        correct: "pick on",
+        options: ["commit a crime", "pick on", "give in", "dissuade", "miss lessons"]
+      },
+      {
+        sentence: "3. It takes a lot of confidence to [ ... ] peer pressure when everyone disagrees with you.",
+        correct: "resist",
+        options: ["give in", "hang out", "resist", "discourage", "persuade"]
+      },
+      {
+        sentence: "4. His new friends are a tough crowd; they have had a [ ... ] on his behavior.",
+        correct: "bad influence",
+        options: ["bad influence", "guilty feeling", "tough choice", "big crime", "missed lesson"]
+      },
+      {
+        sentence: "5. Stop trying to [ ... ] for something that wasn't my fault!",
+        correct: "make me feel guilty",
+        options: ["pick on me", "make me feel guilty", "commit a crime", "deny the truth", "resist me"]
+      }
+    ];
+
+    // INITIALIZATION TASK 1
+    function initTask1() {
+      const container = document.getElementById('task1-list');
+      container.innerHTML = '';
+      matchData.forEach((item, idx) => {
+        const row = document.createElement('div');
+        row.className = 'match-item';
+        
+        let opts = `<option value="">-- Выберите перевод --</option>`;
+        shuffledTranslations.forEach(tr => {
+          opts += `<option value="${tr}">${tr}</option>`;
+        });
+
+        row.innerHTML = `
+          <div class="phrase-label">${idx + 1}. ${item.en}</div>
+          <select data-correct="${item.ru}" onchange="checkSelect(this)">${opts}</select>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    // INITIALIZATION TASK 2
+    function initTask2() {
+      const container = document.getElementById('task2-list');
+      container.innerHTML = '';
+      unscrambleData.forEach((item, qIdx) => {
+        const block = document.createElement('div');
+        block.className = 'unscramble-block';
+        block.dataset.correct = item.correct.trim().toLowerCase();
+
+        let poolChips = item.words.map((w, wIdx) => 
+          `<button type="button" class="chip" data-q="${qIdx}" data-w="${wIdx}" onclick="moveChip(this, true)">${w}</button>`
+        ).join('');
+
+        block.innerHTML = `
+          <div class="drop-area" id="drop-${qIdx}"></div>
+          <div class="chips-pool" id="pool-${qIdx}">${poolChips}</div>
+          <button type="button" class="btn-reset-chips" onclick="resetUnscramble(${qIdx})">Вернуть слова</button>
+        `;
+        container.appendChild(block);
+      });
+    }
+
+    // INITIALIZATION TASK 4
+    function initTask4() {
+      const container = document.getElementById('task4-list');
+      container.innerHTML = '';
+      task4Data.forEach((item, idx) => {
+        const row = document.createElement('div');
+        row.className = 'sentence-item';
+
+        // Shuffle options per item
+        const shuffledOpts = [...item.options].sort(() => 0.5 - Math.random());
+        let opts = `<option value="">-- Выберите вариант --</option>`;
+        shuffledOpts.forEach(opt => {
+          opts += `<option value="${opt}">${opt}</option>`;
+        });
+
+        row.innerHTML = `
+          <p class="sentence-text">${item.sentence}</p>
+          <div class="select-wrap">
+            <select data-correct="${item.correct}" onchange="checkSelect(this)">${opts}</select>
+          </div>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    function checkSelect(selectEl) {
+      const val = selectEl.value;
+      const target = selectEl.getAttribute('data-correct');
+      if (!val) {
+        selectEl.className = '';
+      } else if (val === target) {
+        selectEl.className = 'correct';
+      } else {
+        selectEl.className = 'incorrect';
+      }
+      updateScore();
+    }
+
+    function moveChip(chipEl, toDrop) {
+      const qIdx = chipEl.dataset.q;
+      const drop = document.getElementById(`drop-${qIdx}`);
+      const pool = document.getElementById(`pool-${qIdx}`);
+
+      if (toDrop) {
+        chipEl.onclick = () => moveChip(chipEl, false);
+        drop.appendChild(chipEl);
+      } else {
+        chipEl.onclick = () => moveChip(chipEl, true);
+        pool.appendChild(chipEl);
+      }
+      verifyUnscramble(qIdx);
+    }
+
+    function resetUnscramble(qIdx) {
+      const drop = document.getElementById(`drop-${qIdx}`);
+      const pool = document.getElementById(`pool-${qIdx}`);
+      const chips = Array.from(drop.children);
+      chips.forEach(c => {
+        c.onclick = () => moveChip(c, true);
+        pool.appendChild(c);
+      });
+      drop.className = 'drop-area';
+      updateScore();
+    }
+
+    function verifyUnscramble(qIdx) {
+      const drop = document.getElementById(`drop-${qIdx}`);
+      const block = drop.closest('.unscramble-block');
+      const target = block.dataset.correct;
+
+      const currentWords = Array.from(drop.querySelectorAll('.chip')).map(c => c.textContent.trim());
+      const currentSentence = currentWords.join(' ').toLowerCase();
+
+      if (currentWords.length === 0) {
+        drop.className = 'drop-area';
+      } else if (currentSentence === target) {
+        drop.className = 'drop-area correct';
+      } else {
+        const pool = document.getElementById(`pool-${qIdx}`);
+        if (pool.children.length === 0) {
+          drop.className = 'drop-area incorrect';
+        } else {
+          drop.className = 'drop-area';
+        }
+      }
+      updateScore();
+    }
+
+    function checkSpelling(input) {
+      const val = input.value.trim().toLowerCase();
+      const target = input.dataset.target.toLowerCase();
+      const icon = input.nextElementSibling;
+
+      if (!val) {
+        input.className = 'styled-input';
+        icon.textContent = '';
+      } else if (val === target) {
+        input.className = 'styled-input correct';
+        icon.textContent = '✓';
+        icon.style.color = 'var(--success)';
+      } else {
+        input.className = 'styled-input incorrect';
+        icon.textContent = '✗';
+        icon.style.color = 'var(--error)';
+      }
+      updateScore();
+    }
+
+    function updateScore() {
+      let score = 0;
+      // Task 1
+      document.querySelectorAll('#task1-list select').forEach(s => {
+        if (s.classList.contains('correct')) score++;
+      });
+      // Task 2
+      document.querySelectorAll('.drop-area').forEach(d => {
+        if (d.classList.contains('correct')) score++;
+      });
+      // Task 3
+      document.querySelectorAll('section:nth-of-type(3) .styled-input').forEach(i => {
+        if (i.classList.contains('correct')) score++;
+      });
+      // Task 4
+      document.querySelectorAll('#task4-list select').forEach(s => {
+        if (s.classList.contains('correct')) score++;
+      });
+
+      document.getElementById('total-score').textContent = `${score} / 22`;
+    }
+
+    function resetWorksheet() {
+      initTask1();
+      initTask2();
+      initTask4();
+      document.querySelectorAll('.styled-input').forEach(input => {
+        input.value = '';
+        input.className = 'styled-input';
+        if (input.nextElementSibling) input.nextElementSibling.textContent = '';
+      });
+      updateScore();
+    }
+
+    window.onload = () => {
+      initTask1();
+      initTask2();
+      initTask4();
+    };
+  </script>
+</body>
+</html>
